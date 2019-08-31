@@ -12,6 +12,19 @@ public class CountLettersInArray {
         displayCounts(counts);
     }
 
+    public static class RandomCharacter {
+        //生成一个介于ch1 和 ch2 的随机字母
+        public static char getRandomCharacter(char ch1, char ch2) {
+            return (char) (ch1 + Math.random() * (ch2 - ch1 + 1));
+        }
+
+        //生成一个随机的小写字母
+        public static char getRandomLowerCaseLetter() {
+            return getRandomCharacter('a', 'z');
+        }
+    }
+
+
     public static char[] createArray() {
         char[] chars = new char[100];
 
@@ -44,7 +57,7 @@ public class CountLettersInArray {
             if ((i + 1) % 10 == 0)
                 System.out.println(counts[i] + " " + (char)(i + 'a'));
             else
-                System.out.println(counts[i] + " " + (char) (i + 'a') + " ");
+                System.out.println(counts[i] + " " + (char)(i + 'a') + " ");
         }
     }
 }
